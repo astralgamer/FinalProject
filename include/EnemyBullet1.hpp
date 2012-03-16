@@ -1,31 +1,15 @@
 #ifndef FinalProject_EnemyBullet1_h
 #define FinalProject_EnemyBullet1_h
 
-#include "cinder/app/AppBasic.h"
-#include "cinder/gl/gl.h"
-#include "cinder/ImageIo.h"
-#include "cinder/gl/Texture.h"
-#include "PlayerShip.hpp"
-#include <iostream>
-#include "Resources.h"
+#include "EnemyBullet.hpp"
 
-using namespace ci;
-using namespace ci::app;
-using namespace std;
-using namespace gl;
-
-class EnemyBullet1
-{
+class EnemyBullet1: public EnemyBullet{
 public:
-    EnemyBullet1(Vec2f pos, int hp);
+    EnemyBullet1(Vec2f pos);
 	void collide(PlayerShip* p);
-    void draw();
+    void draw(Texture bullet);
 	void update();
     float radius;
-	int hp;
-	float width, height,t;
-	Vec2f pos, vel;
-	Rectf rec;
 };
 
 #endif

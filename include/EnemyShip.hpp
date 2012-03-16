@@ -7,7 +7,8 @@
 #include "cinder/gl/Texture.h"
 #include <iostream>
 #include "Resources.h"
-#include "EnemyGun1.hpp"
+#include "EnemyGun.hpp"
+#include "PlayerShip.hpp"
 
 using namespace ci;
 using namespace ci::app;
@@ -17,17 +18,18 @@ using namespace gl;
 class EnemyShip
 {
 public:
-    EnemyShip(int type, int arrivalTime, int bulletType, int hp, float atkspd, float xpos, float ypos, float xvel, float yvel, float width, float height);
-    EnemyGun1* eg;
-    void draw();
-	void update(float t);
-    float radius;
-	int arrivalTime, hp, bulletType;
-	float atkspd, width, height;
+    EnemyShip(int arrivalTime, int hp, float atkspd, float xpos, float ypos, float xvel, float yvel, float width, float height,PlayerShip* p, Texture text,Texture bul);
+    EnemyGun* eg;
+    virtual void draw();
+	virtual void update();
+	virtual void collide();
+	int hp, arrivalTime;;
+	float width, height;
 	Vec2f pos, vel;
-	Rectf rec;
+	PlayerShip* p;
+	Texture shipTexture;
 private:
-	int type;
+	float atkspd;
 };
 
 #endif

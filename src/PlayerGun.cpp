@@ -3,7 +3,7 @@
 #include "cinder/ImageIo.h"
 #include "cinder/gl/Texture.h"
 
-#define BPS 30
+#define BPS 5
 
 PlayerGun::PlayerGun()
 {
@@ -18,29 +18,37 @@ void PlayerGun::update(Vec2f mMouseLoc)
     {
         if( t > 1.0/BPS)
         {
-            bullets.push_back(PlayerBullet(mMouseLoc));
+            bullets.push_back(new PlayerBullet(mMouseLoc));
             t = 0;
         }
     }
     
-    for( list<PlayerBullet>::iterator p = bullets.begin(); p != bullets.end(); ++p ){
-        p->update();
-        if( !p->isAlive )
+    for( int i=0;i<bullets.size();i++){
+        bullets[i]->update();
+        if( bullets[i]->hp <= 0 )
         {
-            bullets.erase(p);
+			delete bullets[i];
+			bullets.erase(bullets.begin()+i);
         }
     }
 }
 
 void PlayerGun::init()
 {
-    bulletTexture = Texture(loadImage(loadResource("Bullet1.png")));
+    bulletTexture = Texture(loadImage(loadResource(RES_BULLET)));
 }
 
 void PlayerGun::draw()
 {
-    for( list<PlayerBullet>::iterator p = bullets.begin(); p != bullets.end(); ++p ){
-        p->draw(bulletTexture);
+	for( int i=0;i<bullets.size();i++){
+        if( bullets[i]->hp <= 0 )
+        {
+			delete bullets[i];
+			bullets.erase(bullets.begin()+i);
+        }
+    }
+	for( int i=0;i<bullets.size();i++ ){
+        bullets[i]->draw(bulletTexture);
     }
 }
 

@@ -17,18 +17,8 @@ public:
     PlayerBullet(Vec2f mMouseLoc);
     void update();
     void draw(Texture bullet);
-    void collide();
-    Vec2f getLocation();
-    bool isAlive;
-    
-    //Texture bullet( loadImage( loadResource( "Bullet1.png" ) ) );
-    //Texture * bulletTexture;
-    //void init();
-private:
-    float damage;
+	int hp,radius;
     Vec2f location;
-    double t;
-    double curr;
 };
 
 #endif

@@ -104,22 +104,38 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\include\EnemyBullet1.hpp" />
-    <ClInclude Include="..\include\EnemyGun1.hpp" />
+    <ClInclude Include="..\include\EnemyBullet.hpp" />
+    <ClInclude Include="..\include\EnemyGun.hpp" />
     <ClInclude Include="..\include\EnemyShip.hpp" />
+    <ClInclude Include="..\include\EnemyShip1.hpp" />
+    <ClInclude Include="..\include\EnemyShip2.hpp" />
+    <ClInclude Include="..\include\EnemyShip3.hpp" />
+    <ClInclude Include="..\include\EnemyShip4.hpp" />
+    <ClInclude Include="..\include\EnemyShip5.hpp" />
+    <ClInclude Include="..\include\EnemyShip6.hpp" />
+    <ClInclude Include="..\include\MainScene.hpp" />
+    <ClInclude Include="..\include\PauseScene.hpp" />
     <ClInclude Include="..\include\PlayerBullet.hpp" />
     <ClInclude Include="..\include\PlayerGun.hpp" />
     <ClInclude Include="..\include\PlayerShip.hpp" />
     <ClInclude Include="..\include\Resources.h" />
+    <ClInclude Include="..\include\SceneManager.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Resources.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\EnemyBullet1.cpp" />
-    <ClCompile Include="..\src\EnemyGun1.cpp" />
+    <ClCompile Include="..\src\EnemyBullet.cpp" />
+    <ClCompile Include="..\src\EnemyGun.cpp" />
     <ClCompile Include="..\src\EnemyShip.cpp" />
+    <ClCompile Include="..\src\EnemyShip1.cpp" />
+    <ClCompile Include="..\src\EnemyShip2.cpp" />
+    <ClCompile Include="..\src\EnemyShip3.cpp" />
+    <ClCompile Include="..\src\EnemyShip4.cpp" />
+    <ClCompile Include="..\src\EnemyShip5.cpp" />
+    <ClCompile Include="..\src\EnemyShip6.cpp" />
     <ClCompile Include="..\src\FinalProjectApp.cpp" />
+    <ClCompile Include="..\src\MainScene.cpp" />
     <ClCompile Include="..\src\PlayerBullet.cpp" />
     <ClCompile Include="..\src\PlayerGun.cpp" />
     <ClCompile Include="..\src\PlayerShip.cpp" />
@@ -130,7 +146,12 @@
     <None Include="..\resources\Bullet3.png" />
     <None Include="..\resources\Enemy.png" />
     <None Include="..\resources\Enemy2.png" />
+    <None Include="..\resources\Enemy3.png" />
+    <None Include="..\resources\Enemy4.png" />
+    <None Include="..\resources\Enemy5.png" />
+    <None Include="..\resources\Enemy6.png" />
     <None Include="..\resources\Ship.png" />
+    <None Include="..\resources\ShipMap.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

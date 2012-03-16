@@ -7,6 +7,7 @@
 #include "cinder/gl/Texture.h"
 
 #include "PlayerGun.hpp"
+#include "Resources.h"
 
 using namespace ci;
 using namespace ci::app;
@@ -24,11 +25,12 @@ public:
     
     Vec2f mMouseLoc;
     Vec2f loc;
-    //bool direction;
+    int width, height;
+	Rectf rec;
     Texture shipTexture;
     PlayerGun pg;
+	float remainingLife;
 private:
-    float remainingLife;
     float tween;
 };
 

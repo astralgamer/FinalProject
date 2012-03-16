@@ -6,7 +6,8 @@
 #include "cinder/gl/gl.h"
 #include "cinder/ImageIo.h"
 #include "cinder/gl/Texture.h"
-#include <list>
+#include <vector>
+#include "Resources.h"
 
 using namespace ci;
 using namespace ci::app;
@@ -21,10 +22,9 @@ public:
     void draw();
     void init();
     bool firing;
-    
     Texture bulletTexture;
-    list<PlayerBullet> bullets;
-    double t;
+    vector<PlayerBullet*> bullets;
+    float t;
 };
 
 #endif
