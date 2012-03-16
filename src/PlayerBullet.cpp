@@ -3,8 +3,8 @@
 #include "PlayerShip.hpp"
 #include "MainScene.hpp"
 
-#define SPEED 10
-#define DMG 50
+#define SPEED 15
+#define DMG 100
 
 PlayerBullet::PlayerBullet(Vec2f mMouseLoc)
 {

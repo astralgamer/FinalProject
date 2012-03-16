@@ -20,6 +20,7 @@
 #include <vector>
 #include <iostream>
 #include <fstream>
+#include <string>
 
 
 #define FPS 60.0f

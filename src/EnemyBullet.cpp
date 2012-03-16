@@ -12,8 +12,8 @@ void EnemyBullet::collide(PlayerShip* p){
 		Vec2f closestPoint = pos;
 		if( pos.x > p->rec.getX2() ) closestPoint.x = p->rec.getX2();
 		else if( pos.x < p->rec.getX1() ) closestPoint.x = p->rec.getX1();
-		if( pos.y < p->rec.getY2() ) closestPoint.y = p->rec.getY2();
-		else if( pos.y > p->rec.getY1() ) closestPoint.y = p->rec.getY1();
+		if( pos.y > p->rec.getY2() ) closestPoint.y = p->rec.getY2();
+		else if( pos.y < p->rec.getY1() ) closestPoint.y = p->rec.getY1();
     
 		Vec2f diff = closestPoint -  pos;
 		if( diff.x * diff.x + diff.y * diff.y > radius * radius ){}

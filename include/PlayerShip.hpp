@@ -29,7 +29,7 @@ public:
 	Rectf rec;
     Texture shipTexture;
     PlayerGun pg;
-	float remainingLife;
+	int remainingLife;
 private:
     float tween;
 };

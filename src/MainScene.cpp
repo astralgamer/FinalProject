@@ -39,23 +39,25 @@ void MainScene::mouseDrag( MouseEvent &event ) {
 
 void MainScene::update()
 {
-	time += dt;
-    for ( size_t i = 0; i < enemy.size(); ++i ) {
-		if(time >= enemy[i]->arrivalTime){
-			enemy[i]->update();
-			enemy[i]->collide();
-			if(enemy[i]->hp <= 0 || enemy[i]->pos.y > 650){
-				if(enemy[i]->eg->bullets.size() <= 0){
-					delete enemy[i];
-					enemy.erase(enemy.begin()+i);
-				}
-				else{
-					enemy[i]->eg->firing = false;
+	if(ps.remainingLife > 0){
+		time += dt;
+		for ( size_t i = 0; i < enemy.size(); ++i ) {
+			if(time >= enemy[i]->arrivalTime){
+				enemy[i]->update();
+				enemy[i]->collide();
+				if(enemy[i]->hp <= 0 || enemy[i]->pos.y > 650){
+					if(enemy[i]->eg->bullets.size() <= 0){
+						delete enemy[i];
+						enemy.erase(enemy.begin()+i);
+					}
+					else{
+						enemy[i]->eg->firing = false;
+					}
 				}
 			}
 		}
+		ps.update(mMouseLoc);
 	}
-    ps.update(mMouseLoc);
 }
 
 void MainScene::draw()
@@ -63,11 +65,12 @@ void MainScene::draw()
 	gl::color(1.f,1.f,1.f);
 	if(ps.remainingLife > 0)
 		ps.draw();
+	else
+		gl::drawString("GAME OVER",Vec2f(350,300));
 	for(size_t i=0;i<enemy.size();++i){
 		if(time >= enemy[i]->arrivalTime){
-			if(enemy[i]->hp > 0)
-				enemy[i]->draw();
-			if(enemy[i]->pos.x > mMouseLoc.x - 100 && enemy[i]->pos.x < mMouseLoc.x + 100){
+			enemy[i]->draw();
+			if(enemy[i]->pos.x > mMouseLoc.x - 100 && enemy[i]->pos.x < mMouseLoc.x + 100 && enemy[i]->hp > 0){
 				if(enemy[i]->pos.y < mMouseLoc.y)
 					enemy[i]->eg->firing=true;
 			}
@@ -75,6 +78,16 @@ void MainScene::draw()
 				enemy[i]->eg->firing=false;
 		}
 	}
+	string s = "Life: ";
+	if(ps.remainingLife > 0){
+		char life[10];
+		itoa(ps.remainingLife,life,10);
+		s += life;
+	}
+	else{
+		s+="0";
+	}
+	gl::drawString(s,Vec2f(50,550));
 }
 
 void MainScene::onKeyUp(KeyEvent &e){

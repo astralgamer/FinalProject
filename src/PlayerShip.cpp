@@ -8,7 +8,7 @@
 
 #define DT .5f
 #define THING 1/2.f
-#define PLAYER_HP 50000
+#define PLAYER_HP 10000
 
 float t = 0;
 
