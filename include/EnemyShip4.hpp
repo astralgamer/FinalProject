@@ -6,11 +6,11 @@
 
 class EnemyShip4: public EnemyShip{
 public:
-	EnemyShip4(int arrivalTime, int hp, float xpos, float ypos, float xvel, float yvel,PlayerShip* p,Texture text,Texture bul);
+	EnemyShip4(int arrivalTime, int hp, float xpos, float ypos, float xvel, float yvel,PlayerShip* p);
 	void draw();
 	void update();
 	void collide();
-	Rectf rec;
+	void init();
 	float t;
 	Texture missle;
 	vector<EnemyShip6*> minions;

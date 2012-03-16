@@ -1,11 +1,12 @@
 #include "EnemyBullet.hpp"
 
 #define SPEED 20
-EnemyBullet::EnemyBullet(Vec2f pos, int hp, int radius, Vec2f vel){
+EnemyBullet::EnemyBullet(Vec2f pos, float dmg, float radius, Vec2f vel){
 	this->pos = pos;
-	this->hp = hp;
+	this->dmg = dmg;
 	this->radius = radius;
 	this->vel = vel;
+	isAlive = true;
 }
 
 void EnemyBullet::collide(PlayerShip* p){
@@ -18,8 +19,8 @@ void EnemyBullet::collide(PlayerShip* p){
 		Vec2f diff = closestPoint -  pos;
 		if( diff.x * diff.x + diff.y * diff.y > radius * radius ){}
 		else{
-			p->remainingLife -= hp;
-			hp=0;
+			p->remainingLife -= dmg;
+			isAlive = false;
 		}
 }
 
@@ -29,8 +30,8 @@ void EnemyBullet::draw(Texture bullet){
 
 void EnemyBullet::update(){
 	pos += vel;
-	if(pos.y > 650)
+	if(pos.y > 650 || pos.y < -50 || pos.x < -50 || pos.x > 850)
     {
-        hp = 0;
+        isAlive = false;
     }
 }

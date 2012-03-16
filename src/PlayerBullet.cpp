@@ -3,26 +3,25 @@
 #include "PlayerShip.hpp"
 #include "MainScene.hpp"
 
-#define SPEED 15
-#define DMG 100
-
-PlayerBullet::PlayerBullet(Vec2f mMouseLoc)
+PlayerBullet::PlayerBullet(Vec2f mMouseLoc, float dmg, float radius, Vec2f vel)
 {
-    location = mMouseLoc;
-    hp = DMG;
-	radius = 15;
+    pos = mMouseLoc;
+	this->vel = vel;
+	isAlive = true;
+    this->dmg = dmg;
+	this->radius = radius;
 }
 
 void PlayerBullet::update()
 {
-    location -= Vec2f(0,SPEED);
-    if(location.y < 0)
+    pos -= vel;
+    if(pos.y < 0)
     {
-        hp = 0;
+        isAlive = false;
     }
 }
 
 void PlayerBullet::draw(Texture bullet)
 {
-    cinder::gl::draw( bullet, Vec2f(location.x-radius/2.0,location.y-radius/2.0));
+    cinder::gl::draw( bullet, Vec2f(pos.x-radius/2.0,pos.y-radius/2.0));
 }

@@ -50,10 +50,8 @@ public:
     void mouseDrag( MouseEvent &event );
     virtual void onLoad();
 	void createLevel();
-    
     Vec2f mMouseLoc;
     PlayerShip ps;
-	Texture enShip1, enShip2, enShip3, enShip4, enShip5, enShip6, enBul1, enBul2;
 	float time;
 	float dt;
 	vector<EnemyShip*> enemy;

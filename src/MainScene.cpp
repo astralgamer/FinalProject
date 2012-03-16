@@ -4,18 +4,13 @@ bool paused = false;
 
 void MainScene::onLoad()
 {
+	createLevel();
     ps.init();
-	enShip1 = Texture(loadImage(loadResource(RES_ENEMY1)));
-	enShip2 = Texture(loadImage(loadResource(RES_ENEMY2)));
-	enShip3 = Texture(loadImage(loadResource(RES_ENEMY3)));
-	enShip4 = Texture(loadImage(loadResource(RES_ENEMY4)));
-	enShip5 = Texture(loadImage(loadResource(RES_ENEMY5)));
-	enShip6 = Texture(loadImage(loadResource(RES_ENEMY6)));
-	enBul1 = Texture(loadImage(loadResource(RES_EBULLET1)));
-	enBul2 = Texture(loadImage(loadResource(RES_EBULLET2)));
+	for(int i=0;i<enemy.size();i++)
+		enemy[i]->init();
 	time = 0;
 	dt = 1.0/FPS;
-	createLevel();
+	
 }
 
 void MainScene::mouseDown( MouseEvent &event ) {
@@ -46,12 +41,17 @@ void MainScene::update()
 				enemy[i]->update();
 				enemy[i]->collide();
 				if(enemy[i]->hp <= 0 || enemy[i]->pos.y > 650){
-					if(enemy[i]->eg->bullets.size() <= 0){
+					bool del = true;
+					for(int j = 0; j < enemy[i]->eg.size(); j++){
+						if(enemy[i]->eg[0]->bullets.size() > 0)
+							del = false;
+					}
+					if(del){
 						delete enemy[i];
 						enemy.erase(enemy.begin()+i);
 					}
 					else{
-						enemy[i]->eg->firing = false;
+						enemy[i]->firing = false;
 					}
 				}
 			}
@@ -72,10 +72,10 @@ void MainScene::draw()
 			enemy[i]->draw();
 			if(enemy[i]->pos.x > mMouseLoc.x - 100 && enemy[i]->pos.x < mMouseLoc.x + 100 && enemy[i]->hp > 0){
 				if(enemy[i]->pos.y < mMouseLoc.y)
-					enemy[i]->eg->firing=true;
+					enemy[i]->firing=true;
 			}
 			else
-				enemy[i]->eg->firing=false;
+				enemy[i]->firing=false;
 		}
 	}
 	string s = "Life: ";
@@ -114,35 +114,35 @@ void MainScene::createLevel()
 				switch(type){
 				case 1:
 					infile >> arrivalTime >> hp >> atkspd >> xpos >> ypos >> xvel >> yvel;
-					enemy.push_back(new EnemyShip1(arrivalTime,hp,atkspd,xpos,ypos,xvel,yvel,&ps,enShip1,enBul1));
+					enemy.push_back(new EnemyShip1(arrivalTime,hp,atkspd,xpos,ypos,xvel,yvel,&ps));
 					logfile << "Added Ship 1" << endl;
 					logfile << "Time: " << arrivalTime << " HP: " << hp << " Attack Speed: " << atkspd << endl;
 					logfile << "X: " << xpos << " Y: " << ypos << " XVel: " << xvel << " YVel: " << yvel << endl;
 					break;
 				case 2:
 					infile >> arrivalTime >> hp >> atkspd >> xpos >> ypos >> xvel >> yvel;
-					enemy.push_back(new EnemyShip2(arrivalTime,hp,atkspd,xpos,ypos,xvel,yvel,&ps,enShip2,enBul1));
+					enemy.push_back(new EnemyShip2(arrivalTime,hp,atkspd,xpos,ypos,xvel,yvel,&ps));
 					logfile << "Added Ship 2" << endl;
 					logfile << "Time: " << arrivalTime << " HP: " << hp << " Attack Speed: " << atkspd << endl;
 					logfile << "X: " << xpos << " Y: " << ypos << " XVel: " << xvel << " YVel: " << yvel << endl;
 					break;
 				case 3:
 					infile >> arrivalTime >> hp >> atkspd >> xpos >> ypos >> xvel >> yvel;
-					enemy.push_back(new EnemyShip3(arrivalTime,hp,atkspd,xpos,ypos,xvel,yvel,&ps,enShip3,enBul1));
+					enemy.push_back(new EnemyShip3(arrivalTime,hp,atkspd,xpos,ypos,xvel,yvel,&ps));
 					logfile << "Added Ship 3" << endl;
 					logfile << "Time: " << arrivalTime << " HP: " << hp << " Attack Speed: " << atkspd << endl;
 					logfile << "X: " << xpos << " Y: " << ypos << " XVel: " << xvel << " YVel: " << yvel << endl;
 					break;
 				case 4:
 					infile >> arrivalTime >> hp >> xpos >> ypos >> xvel >> yvel;
-					enemy.push_back(new EnemyShip4(arrivalTime,hp,xpos,ypos,xvel,yvel,&ps,enShip4,enShip6));
+					enemy.push_back(new EnemyShip4(arrivalTime,hp,xpos,ypos,xvel,yvel,&ps));
 					logfile << "Added Ship 4" << endl;
 					logfile << "Time: " << arrivalTime << " HP: " << hp << endl;
 					logfile << "X: " << xpos << " Y: " << ypos << " XVel: " << xvel << " YVel: " << yvel << endl;
 					break;
 				case 5:
 					infile >> arrivalTime >> hp >> atkspd >> xpos >> ypos >> xvel >> yvel;
-					enemy.push_back(new EnemyShip5(arrivalTime,hp,atkspd,xpos,ypos,xvel,yvel,&ps,enShip5,enBul1));
+					enemy.push_back(new EnemyShip5(arrivalTime,hp,atkspd,xpos,ypos,xvel,yvel,&ps));
 					logfile << "Added Ship 5" << endl;
 					logfile << "Time: " << arrivalTime << " HP: " << hp << " Attack Speed: " << atkspd << endl;
 					logfile << "X: " << xpos << " Y: " << ypos << " XVel: " << xvel << " YVel: " << yvel << endl;

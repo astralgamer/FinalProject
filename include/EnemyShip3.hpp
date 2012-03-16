@@ -6,10 +6,10 @@
 
 class EnemyShip3: public EnemyShip{
 public:
-	EnemyShip3(int arrivalTime, int hp, float atkspd, float xpos, float ypos, float xvel, float yvel,PlayerShip* p,Texture text,Texture bul);
+	EnemyShip3(int arrivalTime, int hp, float atkspd, float xpos, float ypos, float xvel, float yvel,PlayerShip* p);
 	void draw();
 	void update();
 	void collide();
-	Rectf rec;
+	void init();
 };
 #endif

@@ -1,5 +1,9 @@
-﻿Build started 3/16/2012 2:26:51 PM.
+﻿Build started 3/16/2012 11:31:36 PM.
+     1>Project "C:\Users\Astral\FinalProject\vc10\FinalProjectApp.vcxproj" on node 2 (clean target(s)).
+     1>_PrepareForClean:
+         Deleting file "Debug\FinalProjectApp.lastbuildstate".
+     1>Done Building Project "C:\Users\Astral\FinalProject\vc10\FinalProjectApp.vcxproj" (clean target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.24
+Time Elapsed 00:00:00.12

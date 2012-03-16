@@ -17,12 +17,13 @@ using namespace gl;
 class EnemyBullet
 {
 public:
-    EnemyBullet(Vec2f pos, int hp, int radius, Vec2f vel);
+    EnemyBullet(Vec2f pos, float dmg, float radius, Vec2f vel);
 	void collide(PlayerShip* p);
     void draw(Texture bullet);
 	void update();
-	int hp, radius;
+	float dmg, radius;
 	Vec2f pos, vel;
+	bool isAlive;
 };
 
 #endif

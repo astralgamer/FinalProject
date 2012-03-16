@@ -14,11 +14,13 @@ class PlayerBullet
 {
 public:
     PlayerBullet();
-    PlayerBullet(Vec2f mMouseLoc);
-    void update();
-    void draw(Texture bullet);
-	int hp,radius;
-    Vec2f location;
+    PlayerBullet(Vec2f pos, float dmg, float radius, Vec2f vel);
+	void draw(Texture bullet);
+	void update();
+	float dmg, radius;
+	Vec2f pos, vel;
+	bool isAlive;
+
 };
 
 #endif

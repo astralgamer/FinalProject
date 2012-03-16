@@ -18,13 +18,15 @@ using namespace gl;
 
 class EnemyGun{
 public:
-    EnemyGun(float atkspeed, Texture text, PlayerShip* p);
+    EnemyGun(float atkspeed, PlayerShip* p);
 	void update(Vec2f pos);
     void draw();
+	void init();
     bool firing;
 	float atkspd,t;  
 	PlayerShip* p;
 	Texture bulletTexture;
+	vector<Texture> textures;
     vector<EnemyBullet*> bullets;
 };
 

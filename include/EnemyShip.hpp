@@ -18,18 +18,20 @@ using namespace gl;
 class EnemyShip
 {
 public:
-    EnemyShip(int arrivalTime, int hp, float atkspd, float xpos, float ypos, float xvel, float yvel, float width, float height,PlayerShip* p, Texture text,Texture bul);
-    EnemyGun* eg;
+    EnemyShip(int arrivalTime, int hp, float atkspd, float xpos, float ypos, float xvel, float yvel, float width, float height,PlayerShip* p);
+    vector<EnemyGun*> eg;
     virtual void draw();
 	virtual void update();
 	virtual void collide();
-	int hp, arrivalTime;;
-	float width, height;
+	virtual void init();
+	int arrivalTime;
+	float hp, width, height;
 	Vec2f pos, vel;
-	PlayerShip* p;
+	Rectf rec;
 	Texture shipTexture;
-private:
+	PlayerShip* p;
 	float atkspd;
+	bool firing;
 };
 
 #endif

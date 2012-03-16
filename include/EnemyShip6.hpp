@@ -10,6 +10,6 @@ public:
 	void draw();
 	void update();
 	void collide();
-	Rectf rec;
+	void init(){};
 };
 #endif
