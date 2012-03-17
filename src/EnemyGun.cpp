@@ -18,7 +18,6 @@ void EnemyGun::update(Vec2f pos)
     if(firing){
         if( t > 1.0/atkspd){
             bullets.push_back(new EnemyBullet(pos,50,15,Vec2f(0,15)));
-			console() << firing << endl;
             t = 0;
         }
     }

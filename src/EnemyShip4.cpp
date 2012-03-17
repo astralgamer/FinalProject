@@ -3,11 +3,14 @@
 EnemyShip4::EnemyShip4(int arrivalTime, int hp, float xpos, float ypos, float xvel, float yvel,PlayerShip* p) : EnemyShip(arrivalTime,hp,0,xpos,ypos,xvel,yvel,82,94,p)
 {
 	rec = Rectf( Vec2f(pos.x-width/2,pos.y-height/2), Vec2f(pos.x+width/2,pos.y+height/2));
-	t = 0;
 }
 
 void  EnemyShip4::update(){
-	t += 1/ci::app::AppBasic::get()->getFrameRate();
+	if(pos.x < width/2.0 + 20 && vel.x < 0)
+		vel.x *= -1;
+	if(pos.x > 780 - width/2.0 && vel.x > 0)
+		vel.x *= -1;
+	EnemyShip::update();
 	if( t > 2 && hp > 0){
         minions.push_back(new EnemyShip6(pos.x,pos.y, p,missle));
         t = 0;
@@ -20,11 +23,6 @@ void  EnemyShip4::update(){
 			minions.erase(minions.begin()+i);
 		}
 	}
-	if(pos.x < width/2.0 + 20 && vel.x < 0)
-		vel.x *= -1;
-	if(pos.x > 780 - width/2.0 && vel.x > 0)
-		vel.x *= -1;
-	EnemyShip::update();
 }
 
 void EnemyShip4::init(){

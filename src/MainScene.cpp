@@ -70,7 +70,7 @@ void MainScene::draw()
 	for(size_t i=0;i<enemy.size();++i){
 		if(time >= enemy[i]->arrivalTime){
 			enemy[i]->draw();
-			if(enemy[i]->pos.x > mMouseLoc.x - 100 && enemy[i]->pos.x < mMouseLoc.x + 100 && enemy[i]->hp > 0){
+			if(enemy[i]->pos.x-enemy[i]->width-100 < mMouseLoc.x && enemy[i]->pos.x+enemy[i]->width+100 > mMouseLoc.x && enemy[i]->hp > 0){
 				if(enemy[i]->pos.y < mMouseLoc.y)
 					enemy[i]->firing=true;
 			}

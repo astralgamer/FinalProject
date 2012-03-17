@@ -11,7 +11,6 @@ public:
 	void update();
 	void collide();
 	void init();
-	float t;
 	Texture missle;
 	vector<EnemyShip6*> minions;
 };

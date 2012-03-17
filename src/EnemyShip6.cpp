@@ -4,18 +4,24 @@ EnemyShip6::EnemyShip6(float xpos, float ypos, PlayerShip* p,Texture text) : Ene
 {
 	rec = Rectf( Vec2f(pos.x-width/2,pos.y-height/2), Vec2f(pos.x+width/2,pos.y+height/2));
 	shipTexture = text;
+	initVel = 50;
 }
 
 void  EnemyShip6::update(){
 	if(p->mMouseLoc.y > pos.y)
-		vel.y = 50;
+		vel.y = initVel;
 	else
-		vel.y = -50;
+		vel.y = -initVel;
 	if(p->mMouseLoc.x > pos.x)
-		vel.x = 50;
+		vel.x = initVel;
 	else
-		vel.x = -50;
+		vel.x = -initVel;
 	EnemyShip::update();
+	if(t > 1){
+		initVel +=25;
+		t=0;
+	}
+	
 }
 
 void EnemyShip6::collide(){

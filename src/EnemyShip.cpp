@@ -8,6 +8,7 @@ EnemyShip::EnemyShip(int arrivalTime, int hp, float atkspd, float xpos, float yp
 	this->atkspd=atkspd;
 	this->width = width;
 	this->height = height;
+	t=0;
 	firing = false;
 	pos = Vec2f(xpos,ypos);
 	vel=Vec2f(xvel,yvel);
@@ -15,6 +16,7 @@ EnemyShip::EnemyShip(int arrivalTime, int hp, float atkspd, float xpos, float yp
 }
 
 void  EnemyShip::update(){
+	t += 1/ci::app::AppBasic::get()->getFrameRate();
 	pos += vel*1/ci::app::AppBasic::get()->getFrameRate();
 	rec = Rectf( Vec2f(pos.x-width/2.0,pos.y-height/2.0), Vec2f(pos.x+width/2.0,pos.y+height/2.0));
 	for(int i=0;i<eg.size();i++){

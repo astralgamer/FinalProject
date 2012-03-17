@@ -32,6 +32,7 @@ public:
 	PlayerShip* p;
 	float atkspd;
 	bool firing;
+	float t;
 };
 
 #endif
