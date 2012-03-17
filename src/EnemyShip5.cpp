@@ -1,11 +1,12 @@
 #include "EnemyShip5.hpp"
 
-EnemyShip5::EnemyShip5(int arrivalTime, int hp, float atkspd, float xpos, float ypos, float xvel, float yvel,PlayerShip* p) : EnemyShip(arrivalTime,hp,atkspd,xpos,ypos,xvel,yvel,444,200,p)
+EnemyShip5::EnemyShip5(int arrivalTime, float hp, float atkspd, float xpos, float ypos, float xvel, float yvel,PlayerShip* p) : EnemyShip(arrivalTime,hp,atkspd,xpos,ypos,xvel,yvel,444,200,p)
 {
 	rec = Rectf( Vec2f(pos.x-width/2,pos.y-height/2), Vec2f(pos.x+width/2,pos.y+height/2));
 	eg.push_back(new EnemyGun(atkspd,p));
 	eg.push_back(new EnemyGun(atkspd,p));
 	angle = 0;
+	initHP = hp;
 }
 
 void  EnemyShip5::update(){
@@ -40,6 +41,7 @@ void  EnemyShip5::update(){
 
 void EnemyShip5::init(){
 	shipTexture = Texture(loadImage(loadResource(RES_ENEMY5)));
+	bar = Texture(loadImage(loadResource(RES_ENEMYHP)));
 	EnemyShip::init();
 }
 
@@ -48,8 +50,20 @@ void EnemyShip5::collide(){
 }
 
 void  EnemyShip5::draw(){
-	if(hp>0)
+	if(hp>0){
 		gl::draw(shipTexture,Vec2f(pos.x-width/2.0,pos.y-height/2.0));
+		gl::draw(bar,Vec2f(15,15));
+		Vec2f hpbar = Vec2f(20,30);
+		float percent = hp/initHP;
+		if(percent < 0)
+			percent = 0;
+		Vec2f life = Vec2f((hpbar.x+475)*percent,40);
+		Rectf rec = Rectf(hpbar,life);
+		gl::color(1,0,0);
+		gl::drawSolidRect(rec);
+		gl::color(1,1,1);
+		
+	}
 	EnemyShip::draw();
 }
 

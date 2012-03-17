@@ -1,6 +1,6 @@
 #include "EnemyShip4.hpp"
 
-EnemyShip4::EnemyShip4(int arrivalTime, int hp, float xpos, float ypos, float xvel, float yvel,PlayerShip* p) : EnemyShip(arrivalTime,hp,0,xpos,ypos,xvel,yvel,82,94,p)
+EnemyShip4::EnemyShip4(int arrivalTime, float hp, float xpos, float ypos, float xvel, float yvel,PlayerShip* p) : EnemyShip(arrivalTime,hp,0,xpos,ypos,xvel,yvel,82,94,p)
 {
 	rec = Rectf( Vec2f(pos.x-width/2,pos.y-height/2), Vec2f(pos.x+width/2,pos.y+height/2));
 }

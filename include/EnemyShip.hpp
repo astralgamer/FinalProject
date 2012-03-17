@@ -18,7 +18,7 @@ using namespace gl;
 class EnemyShip
 {
 public:
-    EnemyShip(int arrivalTime, int hp, float atkspd, float xpos, float ypos, float xvel, float yvel, float width, float height,PlayerShip* p);
+    EnemyShip(int arrivalTime, float hp, float atkspd, float xpos, float ypos, float xvel, float yvel, float width, float height,PlayerShip* p);
     vector<EnemyGun*> eg;
     virtual void draw();
 	virtual void update();

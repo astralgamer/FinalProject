@@ -1,6 +1,6 @@
 #include "EnemyShip.hpp"
 
-EnemyShip::EnemyShip(int arrivalTime, int hp, float atkspd, float xpos, float ypos,float xvel, float yvel, float width, float height,PlayerShip* p)
+EnemyShip::EnemyShip(int arrivalTime, float hp, float atkspd, float xpos, float ypos,float xvel, float yvel, float width, float height,PlayerShip* p)
 {
 	this->p = p;
     this->hp = hp;

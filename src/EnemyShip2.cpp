@@ -1,9 +1,10 @@
 #include "EnemyShip2.hpp"
 
-EnemyShip2::EnemyShip2(int arrivalTime, int hp, float atkspd, float xpos, float ypos, float xvel, float yvel, PlayerShip* p) : EnemyShip(arrivalTime,hp,atkspd,xpos,ypos,xvel,yvel,60,74,p)
+EnemyShip2::EnemyShip2(int arrivalTime, float hp, float atkspd, float xpos, float ypos, float xvel, float yvel, PlayerShip* p) : EnemyShip(arrivalTime,hp,atkspd,xpos,ypos,xvel,yvel,60,74,p)
 {
 	rec = Rectf( Vec2f(pos.x-width/2,pos.y-height/2), Vec2f(pos.x+width/2,pos.y+height/2));
-	firing = true;
+	eg.push_back(new EnemyGun(atkspd,p));
+
 }
 
 void EnemyShip2::update(){
@@ -16,10 +17,16 @@ void EnemyShip2::update(){
 	if(pos.x > 780 - width/2.0 && vel.x > 0)
 		vel.x *= -1;
 	EnemyShip::update();
-	for(int i=0;i<eg.size();i++){
-		eg[i]->firing = firing;
-		eg[i]->update(Vec2f(pos.x,pos.y-height/2),Vec2f((p->mMouseLoc.x-pos.x)/3, (p->mMouseLoc.y-pos.y))/30);
+	if(pos.x-width-200 < p->mMouseLoc.x && pos.x+width+200 > p->mMouseLoc.x && hp > 0){
+		if(pos.y < p->mMouseLoc.y)
+			firing=true;
 	}
+	else
+		firing=false;
+	for(int i=0;i<eg.size();i++)
+		eg[i]->firing = firing;
+	eg[0]->update(Vec2f(pos.x-width/3,pos.y-height/2),Vec2f(-5,8));
+	eg[1]->update(Vec2f(pos.x+width/3,pos.y-height/2),Vec2f(5,8));
 }
 
 void EnemyShip2::init(){

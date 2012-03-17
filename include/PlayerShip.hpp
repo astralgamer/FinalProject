@@ -27,9 +27,9 @@ public:
     Vec2f loc;
     int width, height;
 	Rectf rec;
-    Texture shipTexture;
+    Texture shipTexture, hp, explo;
     PlayerGun pg;
-	int remainingLife;
+	float remainingLife, initLife;
 private:
     float tween;
 };

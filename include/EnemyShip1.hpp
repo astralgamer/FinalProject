@@ -6,7 +6,7 @@
 
 class EnemyShip1: public EnemyShip{
 public:
-	EnemyShip1(int arrivalTime, int hp, float atkspd, float xpos, float ypos, float xvel, float yvel,PlayerShip* p);
+	EnemyShip1(int arrivalTime, float hp, float atkspd, float xpos, float ypos, float xvel, float yvel,PlayerShip* p);
 	void draw();
 	void update();
 	void collide();

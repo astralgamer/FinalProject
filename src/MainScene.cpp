@@ -57,32 +57,31 @@ void MainScene::update()
 				}
 			}
 		}
+		if ( mMouseLoc.x - ps.width/2 < 0 )
+			mMouseLoc.x = ps.width/2;
+		else if (mMouseLoc.x + ps.width/2 > getWindowWidth() )
+			mMouseLoc.x = getWindowWidth() - ps.width/2;
+		if ( mMouseLoc.y + ps.height > getWindowHeight() )
+			mMouseLoc.y = getWindowHeight() - ps.height;
+		else if ( mMouseLoc.y < 0 )
+			 mMouseLoc.y = 0;
 		ps.update(mMouseLoc);
 	}
 }
 
 void MainScene::draw()
 {
+	
 	gl::color(1.f,1.f,1.f);
-	if(ps.remainingLife > 0)
-		ps.draw();
-	else
-		gl::drawString("GAME OVER",Vec2f(350,300));
 	for(size_t i=0;i<enemy.size();++i){
 		if(time >= enemy[i]->arrivalTime){
 			enemy[i]->draw();
 		}
 	}
-	string s = "Life: ";
-	if(ps.remainingLife > 0){
-		char life[10];
-		itoa(ps.remainingLife,life,10);
-		s += life;
-	}
-	else{
-		s+="0";
-	}
-	gl::drawString(s,Vec2f(50,550));
+	if(ps.remainingLife > 0)
+		ps.draw();
+	else
+		gl::drawString("GAME OVER",Vec2f(350,300));
 }
 
 void MainScene::onKeyUp(KeyEvent &e){
