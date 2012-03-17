@@ -3,6 +3,7 @@
 EnemyShip2::EnemyShip2(int arrivalTime, int hp, float atkspd, float xpos, float ypos, float xvel, float yvel, PlayerShip* p) : EnemyShip(arrivalTime,hp,atkspd,xpos,ypos,xvel,yvel,60,74,p)
 {
 	rec = Rectf( Vec2f(pos.x-width/2,pos.y-height/2), Vec2f(pos.x+width/2,pos.y+height/2));
+	firing = true;
 }
 
 void EnemyShip2::update(){
@@ -15,6 +16,10 @@ void EnemyShip2::update(){
 	if(pos.x > 780 - width/2.0 && vel.x > 0)
 		vel.x *= -1;
 	EnemyShip::update();
+	for(int i=0;i<eg.size();i++){
+		eg[i]->firing = firing;
+		eg[i]->update(Vec2f(pos.x,pos.y-height/2),Vec2f((p->mMouseLoc.x-pos.x)/15, (p->mMouseLoc.y-pos.y))/15);
+	}
 }
 
 void EnemyShip2::init(){

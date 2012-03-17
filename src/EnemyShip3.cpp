@@ -7,14 +7,24 @@ EnemyShip3::EnemyShip3(int arrivalTime, int hp, float atkspd, float xpos, float 
 
 void  EnemyShip3::update(){
 	if(p->mMouseLoc.y > pos.y)
-		vel.y = 50;
+		vel.y = 75;
 	else
-		vel.y = -50;
+		vel.y = -75;
 	if(p->mMouseLoc.x > pos.x)
-		vel.x = 50;
+		vel.x = 75;
 	else
-		vel.x = -50;
+		vel.x = -75;
 	EnemyShip::update();
+	if(pos.x-width-200 < p->mMouseLoc.x && pos.x+width+200 > p->mMouseLoc.x && hp > 0){
+		if(pos.y < p->mMouseLoc.y)
+			firing=true;
+	}
+	else
+		firing=false;
+	for(int i=0;i<eg.size();i++){
+		eg[i]->firing = firing;
+		eg[i]->update(Vec2f(pos.x,pos.y-height/2),Vec2f(0,5));
+	}
 }
 
 void EnemyShip3::init(){

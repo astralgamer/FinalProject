@@ -11,5 +11,6 @@ public:
 	void update();
 	void collide();
 	void init();
+	float angle;
 };
 #endif

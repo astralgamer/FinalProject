@@ -39,7 +39,8 @@ void MainScene::update()
 		for ( size_t i = 0; i < enemy.size(); ++i ) {
 			if(time >= enemy[i]->arrivalTime){
 				enemy[i]->update();
-				enemy[i]->collide();
+				if(enemy[i]->hp > 0)
+					enemy[i]->collide();
 				if(enemy[i]->hp <= 0 || enemy[i]->pos.y > 650){
 					bool del = true;
 					for(int j = 0; j < enemy[i]->eg.size(); j++){
@@ -70,12 +71,6 @@ void MainScene::draw()
 	for(size_t i=0;i<enemy.size();++i){
 		if(time >= enemy[i]->arrivalTime){
 			enemy[i]->draw();
-			if(enemy[i]->pos.x-enemy[i]->width-100 < mMouseLoc.x && enemy[i]->pos.x+enemy[i]->width+100 > mMouseLoc.x && enemy[i]->hp > 0){
-				if(enemy[i]->pos.y < mMouseLoc.y)
-					enemy[i]->firing=true;
-			}
-			else
-				enemy[i]->firing=false;
 		}
 	}
 	string s = "Life: ";

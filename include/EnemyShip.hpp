@@ -24,7 +24,7 @@ public:
 	virtual void update();
 	virtual void collide();
 	virtual void init();
-	int arrivalTime;
+	int arrivalTime,bulletType;
 	float hp, width, height;
 	Vec2f pos, vel;
 	Rectf rec;

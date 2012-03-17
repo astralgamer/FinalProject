@@ -5,7 +5,7 @@
 
 #define BPS 10
 #define SPEED 15
-#define DMG 100
+#define DMG 75
 
 PlayerGun::PlayerGun()
 {

@@ -9,6 +9,7 @@ EnemyShip::EnemyShip(int arrivalTime, int hp, float atkspd, float xpos, float yp
 	this->width = width;
 	this->height = height;
 	t=0;
+	bulletType = 0;
 	firing = false;
 	pos = Vec2f(xpos,ypos);
 	vel=Vec2f(xvel,yvel);
@@ -19,10 +20,6 @@ void  EnemyShip::update(){
 	t += 1/ci::app::AppBasic::get()->getFrameRate();
 	pos += vel*1/ci::app::AppBasic::get()->getFrameRate();
 	rec = Rectf( Vec2f(pos.x-width/2.0,pos.y-height/2.0), Vec2f(pos.x+width/2.0,pos.y+height/2.0));
-	for(int i=0;i<eg.size();i++){
-		eg[i]->firing = firing;
-		eg[i]->update(Vec2f(pos.x,pos.y-height/2));
-	}
 }
 
 void EnemyShip::init(){
@@ -71,15 +68,15 @@ void EnemyShip::collide(){
 			p->pg.bullets[i]->isAlive = false;
 			delete p->pg.bullets[i];
 			p->pg.bullets.erase(p->pg.bullets.begin()+i);
-			for(int j=0;j<eg.size();j++)
-				eg[j]->firing = false;
-			firing = false;
-			return;
+			if(hp <= 0){
+				firing = false;
+				return;
+			}
 		}
 	}
 }
 
 void  EnemyShip::draw(){
 	for(int j=0;j<eg.size();j++)
-		eg[j]->draw();
+		eg[j]->draw(bulletType);
 }

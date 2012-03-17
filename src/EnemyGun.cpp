@@ -12,16 +12,15 @@ void EnemyGun::init(){
 	textures.push_back(Texture(loadImage(loadResource(RES_EBULLET2))));
 }
 
-void EnemyGun::update(Vec2f pos)
+void EnemyGun::update(Vec2f pos, Vec2f vel)
 {
 	t += 1/ci::app::AppBasic::get()->getFrameRate();
     if(firing){
         if( t > 1.0/atkspd){
-            bullets.push_back(new EnemyBullet(pos,50,15,Vec2f(0,15)));
+            bullets.push_back(new EnemyBullet(pos,50,15,vel));
             t = 0;
         }
     }
-    
 	for( int i = 0; i < bullets.size();i++){
         bullets[i]->update();
 		bullets[i]->collide(p);
@@ -32,9 +31,9 @@ void EnemyGun::update(Vec2f pos)
     }
 }
 
-void EnemyGun::draw()
+void EnemyGun::draw(int type)
 {
    for( int i = 0; i < bullets.size();i++){
-        bullets[i]->draw(textures[0]);
+        bullets[i]->draw(textures[type]);
     }
 }

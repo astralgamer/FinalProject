@@ -19,8 +19,8 @@ using namespace gl;
 class EnemyGun{
 public:
     EnemyGun(float atkspeed, PlayerShip* p);
-	void update(Vec2f pos);
-    void draw();
+	void update(Vec2f pos,Vec2f vel);
+    void draw(int type);
 	void init();
     bool firing;
 	float atkspd,t;  
