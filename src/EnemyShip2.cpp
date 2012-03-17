@@ -18,7 +18,7 @@ void EnemyShip2::update(){
 	EnemyShip::update();
 	for(int i=0;i<eg.size();i++){
 		eg[i]->firing = firing;
-		eg[i]->update(Vec2f(pos.x,pos.y-height/2),Vec2f((p->mMouseLoc.x-pos.x)/15, (p->mMouseLoc.y-pos.y))/15);
+		eg[i]->update(Vec2f(pos.x,pos.y-height/2),Vec2f((p->mMouseLoc.x-pos.x)/3, (p->mMouseLoc.y-pos.y))/30);
 	}
 }
 
