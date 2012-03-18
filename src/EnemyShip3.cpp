@@ -25,6 +25,14 @@ void  EnemyShip3::update(){
 		eg[i]->firing = firing;
 		eg[i]->update(Vec2f(pos.x,pos.y-height/2),Vec2f(0,5));
 	}
+	for(int i=0;i<ex.size();i++){
+		if(ex[i]->isAlive)
+			ex[i]->update();
+		else{
+			delete ex[i];
+			ex.erase(ex.begin()+i);
+		}
+	}
 }
 
 void EnemyShip3::init(){

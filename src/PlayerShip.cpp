@@ -123,7 +123,7 @@ void PlayerShip::draw()
 	float percent = remainingLife/initLife;
 	if(percent < 0)
 		percent = 0;
-	Vec2f life = Vec2f((hpbar.x+390)*percent,574);
+	Vec2f life = Vec2f(hpbar.x+390*percent,574);
 	Rectf rec = Rectf(hpbar,life);
 	gl::color(0,1,0);
 	gl::drawSolidRect(rec);

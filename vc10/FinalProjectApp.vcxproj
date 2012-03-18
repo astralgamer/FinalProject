@@ -113,6 +113,7 @@
     <ClInclude Include="..\include\EnemyShip4.hpp" />
     <ClInclude Include="..\include\EnemyShip5.hpp" />
     <ClInclude Include="..\include\EnemyShip6.hpp" />
+    <ClInclude Include="..\include\Explode.hpp" />
     <ClInclude Include="..\include\MainScene.hpp" />
     <ClInclude Include="..\include\PauseScene.hpp" />
     <ClInclude Include="..\include\PlayerBullet.hpp" />
@@ -134,6 +135,7 @@
     <ClCompile Include="..\src\EnemyShip4.cpp" />
     <ClCompile Include="..\src\EnemyShip5.cpp" />
     <ClCompile Include="..\src\EnemyShip6.cpp" />
+    <ClCompile Include="..\src\Explode.cpp" />
     <ClCompile Include="..\src\FinalProjectApp.cpp" />
     <ClCompile Include="..\src\MainScene.cpp" />
     <ClCompile Include="..\src\PlayerBullet.cpp" />

@@ -9,6 +9,7 @@
 #include "Resources.h"
 #include "EnemyGun.hpp"
 #include "PlayerShip.hpp"
+#include "Explode.hpp"
 
 using namespace ci;
 using namespace ci::app;
@@ -20,6 +21,7 @@ class EnemyShip
 public:
     EnemyShip(int arrivalTime, float hp, float atkspd, float xpos, float ypos, float xvel, float yvel, float width, float height,PlayerShip* p);
     vector<EnemyGun*> eg;
+	vector<Explode*> ex;
     virtual void draw();
 	virtual void update();
 	virtual void collide();
@@ -28,7 +30,7 @@ public:
 	float hp, width, height;
 	Vec2f pos, vel;
 	Rectf rec;
-	Texture shipTexture;
+	Texture shipTexture,explo;
 	PlayerShip* p;
 	float atkspd;
 	bool firing;

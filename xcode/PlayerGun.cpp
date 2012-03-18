@@ -3,7 +3,7 @@
 #include "cinder/ImageIo.h"
 #include "cinder/gl/Texture.h"
 
-#define BPS 5
+#define BPS 30
 
 PlayerGun::PlayerGun()
 {

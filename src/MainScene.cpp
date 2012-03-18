@@ -44,8 +44,16 @@ void MainScene::update()
 				if(enemy[i]->hp <= 0 || enemy[i]->pos.y > 650){
 					bool del = true;
 					for(int j = 0; j < enemy[i]->eg.size(); j++){
-						if(enemy[i]->eg[0]->bullets.size() > 0)
+						if(enemy[i]->eg[0]->bullets.size() > 0){
 							del = false;
+							break;
+						}
+					}
+					for(int j = 0; j < enemy[i]->ex.size(); j++){
+						if(enemy[i]->ex[0]->isAlive){
+							del = false;
+							break;
+						}
 					}
 					if(del){
 						delete enemy[i];

@@ -17,10 +17,21 @@ void  EnemyShip4::update(){
     }
 	for(int i=0;i<minions.size();i++){
 		minions[i]->update();
-		minions[i]->collide();
-		if(minions[i]->hp <= 0){
-			delete minions[i];
-			minions.erase(minions.begin()+i);
+		if(minions[i]->hp > 0)
+			minions[i]->collide();
+		else{
+			if(minions[i]->ex.size() <= 0){
+				delete minions[i];
+				minions.erase(minions.begin()+i);
+			}
+		}
+	}
+	for(int i=0;i<ex.size();i++){
+		if(ex[i]->isAlive)
+			ex[i]->update();
+		else{
+			delete ex[i];
+			ex.erase(ex.begin()+i);
 		}
 	}
 }
@@ -28,6 +39,7 @@ void  EnemyShip4::update(){
 void EnemyShip4::init(){
 	shipTexture = Texture(loadImage(loadResource(RES_ENEMY4)));
 	missle = Texture(loadImage(loadResource(RES_ENEMY6)));
+	explo = Texture( loadImage( loadResource( RES_EXPLODE ) ) );
 }
 
 void EnemyShip4::collide(){
@@ -39,6 +51,9 @@ void  EnemyShip4::draw(){
 		gl::draw(shipTexture,Vec2f(pos.x-width/2.0,pos.y-height/2.0));
 	for(int i=0;i<minions.size();i++){
 		minions[i]->draw();
+	}
+	for(int i=0;i<ex.size();i++){
+		ex[i]->draw();
 	}
 }
 

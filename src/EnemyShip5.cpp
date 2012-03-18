@@ -37,6 +37,14 @@ void  EnemyShip5::update(){
 			angle=0;
 		}
 	}
+	for(int i=0;i<ex.size();i++){
+		if(ex[i]->isAlive)
+			ex[i]->update();
+		else{
+			delete ex[i];
+			ex.erase(ex.begin()+i);
+		}
+	}
 }
 
 void EnemyShip5::init(){
@@ -55,9 +63,9 @@ void  EnemyShip5::draw(){
 		gl::draw(bar,Vec2f(15,15));
 		Vec2f hpbar = Vec2f(20,30);
 		float percent = hp/initHP;
-		if(percent < 0)
+		if(percent <= 0)
 			percent = 0;
-		Vec2f life = Vec2f((hpbar.x+475)*percent,40);
+		Vec2f life = Vec2f(hpbar.x+475*percent,40);
 		Rectf rec = Rectf(hpbar,life);
 		gl::color(1,0,0);
 		gl::drawSolidRect(rec);

@@ -25,6 +25,7 @@ void  EnemyShip::update(){
 void EnemyShip::init(){
 	for(int i=0;i<eg.size();i++)
 		eg[i]->init();
+	explo = Texture( loadImage( loadResource( RES_EXPLODE ) ) );
 }
 
 void EnemyShip::collide(){
@@ -52,6 +53,7 @@ void EnemyShip::collide(){
 			for(int j=0;j<eg.size();j++)
 				eg[j]->firing = false;
 			firing = false;
+			ex.push_back(new Explode(pos,5,explo,0));
 			return;
 	}
 	for(int i=0;i<p->pg.bullets.size();i++){
@@ -69,6 +71,7 @@ void EnemyShip::collide(){
 			delete p->pg.bullets[i];
 			p->pg.bullets.erase(p->pg.bullets.begin()+i);
 			if(hp <= 0){
+				ex.push_back(new Explode(pos,5,explo,0));
 				firing = false;
 				return;
 			}
@@ -79,4 +82,6 @@ void EnemyShip::collide(){
 void  EnemyShip::draw(){
 	for(int j=0;j<eg.size();j++)
 		eg[j]->draw(bulletType);
+	for(int j=0;j<ex.size();j++)
+		ex[j]->draw();
 }
