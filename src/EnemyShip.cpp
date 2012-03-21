@@ -48,6 +48,7 @@ void EnemyShip::collide(){
 			}
 			else{
 				p->remainingLife -= hp;
+				p->score += 100;
 				hp = 0;
 			}
 			for(int j=0;j<eg.size();j++)
@@ -56,25 +57,52 @@ void EnemyShip::collide(){
 			ex.push_back(new Explode(pos,5,explo,0));
 			return;
 	}
-	for(int i=0;i<p->pg.bullets.size();i++){
-		Vec2f closestPoint = p->pg.bullets[i]->pos;
-		if( p->pg.bullets[i]->pos.x > rec.getX2() ) closestPoint.x = rec.getX2();
-		else if( p->pg.bullets[i]->pos.x < rec.getX1() ) closestPoint.x = rec.getX1();
-		if( p->pg.bullets[i]->pos.y > rec.getY2() ) closestPoint.y = rec.getY2();
-		else if( p->pg.bullets[i]->pos.y < rec.getY1() ) closestPoint.y = rec.getY1();
+	for(int i=0;i<p->pg->bullets.size();i++){
+		Vec2f closestPoint,diff;
+		switch(p->pg->bullets[i]->type){
+		case PlayerBullet::Bullet:
+			closestPoint = p->pg->bullets[i]->pos;
+			if( p->pg->bullets[i]->pos.x > rec.getX2() ) closestPoint.x = rec.getX2();
+			else if( p->pg->bullets[i]->pos.x < rec.getX1() ) closestPoint.x = rec.getX1();
+			if( p->pg->bullets[i]->pos.y > rec.getY2() ) closestPoint.y = rec.getY2();
+			else if( p->pg->bullets[i]->pos.y < rec.getY1() ) closestPoint.y = rec.getY1();
     
-		Vec2f diff = closestPoint -  p->pg.bullets[i]->pos;
-		if( diff.x * diff.x + diff.y * diff.y > p->pg.bullets[i]->radius * p->pg.bullets[i]->radius){}
-		else{
-			hp -= p->pg.bullets[i]->dmg;
-			p->pg.bullets[i]->isAlive = false;
-			delete p->pg.bullets[i];
-			p->pg.bullets.erase(p->pg.bullets.begin()+i);
-			if(hp <= 0){
-				ex.push_back(new Explode(pos,5,explo,0));
-				firing = false;
-				return;
+			diff = closestPoint -  p->pg->bullets[i]->pos;
+			if( diff.x * diff.x + diff.y * diff.y > p->pg->bullets[i]->radius * p->pg->bullets[i]->radius){}
+			else{
+				hp -= p->pg->bullets[i]->dmg;
+				p->pg->bullets[i]->isAlive = false;
+				delete p->pg->bullets[i];
+				p->pg->bullets.erase(p->pg->bullets.begin()+i);
+				if(hp <= 0){
+					p->score += 100;
+					ex.push_back(new Explode(pos,5,explo,0));
+					firing = false;
+					return;
+				}
 			}
+			break;
+		case PlayerBullet::Laser:
+			bool col = false;
+			if( (p->mMouseLoc.x - 70.5 <= rec.getX2() && p->mMouseLoc.x - 70.5 >= rec.getX1() )|| (p->mMouseLoc.x + 70.5 >= rec.getX1() && p->mMouseLoc.x + 70.5 <= rec.getX2())){
+				if( p->mMouseLoc.y >= rec.getY2() ){
+					col = true;
+				} 
+			}
+			if( (rec.getX1() <= p->mMouseLoc.x + 70.5 && rec.getX1() >= p->mMouseLoc.x - 70.5 )|| (rec.getX2() >= p->mMouseLoc.x - 70.5 && rec.getX2() <= p->mMouseLoc.x + 70.5)){
+				if( p->mMouseLoc.y >= rec.getY2() ){
+					col = true;
+				} 
+			}
+			if(col){
+				p->pg->bullets[0]->height = rec.getY2();
+				hp -= 50;
+				if(hp <= 0){
+					p->score += 100;
+					ex.push_back(new Explode(pos,5,explo,0));
+				}
+			}
+			break;
 		}
 	}
 }

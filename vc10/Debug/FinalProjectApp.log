@@ -1,9 +1,134 @@
-﻿Build started 3/18/2012 1:17:38 PM.
-     1>Project "C:\Users\Astral\FinalProject\vc10\FinalProjectApp.vcxproj" on node 2 (clean target(s)).
-     1>_PrepareForClean:
-         Deleting file "Debug\FinalProjectApp.lastbuildstate".
-     1>Done Building Project "C:\Users\Astral\FinalProject\vc10\FinalProjectApp.vcxproj" (clean target(s)).
-
-Build succeeded.
-
-Time Elapsed 00:00:00.15
+﻿Build started 3/21/2012 10:18:23 PM.
+     1>Project "C:\Users\Astral\FinalProject\vc10\FinalProjectApp.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Debug\FinalProjectApp.unsuccessfulbuild".
+       ClCompile:
+         c:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\include /I..\..\cinder_0.8.3_vc2010\include /I..\..\cinder_0.8.3_vc2010\boost /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\src\EnemyBullet.cpp ..\src\EnemyGun.cpp ..\src\EnemyShip.cpp ..\src\EnemyShip1.cpp ..\src\EnemyShip2.cpp ..\src\EnemyShip3.cpp ..\src\EnemyShip4.cpp ..\src\EnemyShip5.cpp ..\src\EnemyShip6.cpp ..\src\EnemyShip7.cpp ..\src\Explode.cpp ..\src\FinalProjectApp.cpp ..\src\MainScene.cpp ..\src\PlayerBullet.cpp ..\src\PlayerGun1.cpp ..\src\PlayerShip.cpp
+         PlayerShip.cpp
+     1>c:\users\astral\finalproject\include\PlayerGun.hpp(29): warning C4018: '<' : signed/unsigned mismatch
+         PlayerGun1.cpp
+     1>c:\users\astral\finalproject\include\PlayerGun.hpp(29): warning C4018: '<' : signed/unsigned mismatch
+     1>..\src\PlayerGun1.cpp(19): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\PlayerGun1.cpp(19): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\PlayerGun1.cpp(22): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\PlayerGun1.cpp(22): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\PlayerGun1.cpp(23): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\PlayerGun1.cpp(23): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\PlayerGun1.cpp(24): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\PlayerGun1.cpp(24): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\PlayerGun1.cpp(27): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\PlayerGun1.cpp(27): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\PlayerGun1.cpp(28): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\PlayerGun1.cpp(28): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\PlayerGun1.cpp(29): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\PlayerGun1.cpp(29): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\PlayerGun1.cpp(30): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\PlayerGun1.cpp(30): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\PlayerGun1.cpp(31): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\PlayerGun1.cpp(31): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\PlayerGun1.cpp(32): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\PlayerGun1.cpp(32): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\PlayerGun1.cpp(33): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\PlayerGun1.cpp(33): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\PlayerGun1.cpp(38): warning C4018: '<' : signed/unsigned mismatch
+     1>..\src\PlayerGun1.cpp(43): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\PlayerGun1.cpp(43): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\PlayerGun1.cpp(52): warning C4018: '<' : signed/unsigned mismatch
+     1>..\src\PlayerGun1.cpp(59): warning C4018: '<' : signed/unsigned mismatch
+         PlayerBullet.cpp
+     1>c:\users\astral\finalproject\include\PlayerGun.hpp(29): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\astral\finalproject\include\PauseScene.hpp(51): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\astral\finalproject\include\PauseScene.hpp(51): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\astral\finalproject\include\PauseScene.hpp(56): warning C4244: 'argument' : conversion from 'GLint' to 'float', possible loss of data
+     1>c:\users\astral\finalproject\include\PauseScene.hpp(57): warning C4244: 'argument' : conversion from 'GLint' to 'float', possible loss of data
+     1>c:\users\astral\finalproject\include\PauseScene.hpp(58): warning C4244: 'argument' : conversion from 'GLint' to 'float', possible loss of data
+     1>c:\users\astral\finalproject\include\PauseScene.hpp(62): warning C4244: 'argument' : conversion from 'GLint' to 'float', possible loss of data
+     1>c:\users\astral\finalproject\include\PauseScene.hpp(65): warning C4244: 'argument' : conversion from 'GLint' to 'float', possible loss of data
+     1>c:\users\astral\finalproject\include\PauseScene.hpp(68): warning C4244: 'argument' : conversion from 'GLint' to 'float', possible loss of data
+     1>C:\Users\Astral\FinalProject\include\MainScene.hpp(48): warning C4355: 'this' : used in base member initializer list
+     1>..\src\PlayerBullet.cpp(45): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\PlayerBullet.cpp(45): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\PlayerBullet.cpp(48): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>..\src\PlayerBullet.cpp(48): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>..\src\PlayerBullet.cpp(48): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\PlayerBullet.cpp(48): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+         MainScene.cpp
+     1>c:\users\astral\finalproject\include\PauseScene.hpp(51): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\astral\finalproject\include\PauseScene.hpp(51): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\astral\finalproject\include\PauseScene.hpp(56): warning C4244: 'argument' : conversion from 'GLint' to 'float', possible loss of data
+     1>c:\users\astral\finalproject\include\PauseScene.hpp(57): warning C4244: 'argument' : conversion from 'GLint' to 'float', possible loss of data
+     1>c:\users\astral\finalproject\include\PauseScene.hpp(58): warning C4244: 'argument' : conversion from 'GLint' to 'float', possible loss of data
+     1>c:\users\astral\finalproject\include\PauseScene.hpp(62): warning C4244: 'argument' : conversion from 'GLint' to 'float', possible loss of data
+     1>c:\users\astral\finalproject\include\PauseScene.hpp(65): warning C4244: 'argument' : conversion from 'GLint' to 'float', possible loss of data
+     1>c:\users\astral\finalproject\include\PauseScene.hpp(68): warning C4244: 'argument' : conversion from 'GLint' to 'float', possible loss of data
+     1>c:\users\astral\finalproject\include\PlayerGun.hpp(29): warning C4018: '<' : signed/unsigned mismatch
+     1>C:\Users\Astral\FinalProject\include\MainScene.hpp(48): warning C4355: 'this' : used in base member initializer list
+     1>..\src\MainScene.cpp(17): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>..\src\MainScene.cpp(17): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>..\src\MainScene.cpp(19): warning C4018: '<' : signed/unsigned mismatch
+     1>..\src\MainScene.cpp(22): warning C4305: '=' : truncation from 'double' to 'float'
+     1>..\src\MainScene.cpp(46): warning C4018: '<' : signed/unsigned mismatch
+     1>..\src\MainScene.cpp(52): warning C4018: '<' : signed/unsigned mismatch
+     1>..\src\MainScene.cpp(71): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>..\src\MainScene.cpp(73): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>..\src\MainScene.cpp(75): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>..\src\MainScene.cpp(89): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>..\src\MainScene.cpp(136): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>..\src\MainScene.cpp(143): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>..\src\MainScene.cpp(150): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>..\src\MainScene.cpp(157): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>..\src\MainScene.cpp(164): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+         FinalProjectApp.cpp
+     1>c:\users\astral\finalproject\include\PauseScene.hpp(51): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\astral\finalproject\include\PauseScene.hpp(51): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\astral\finalproject\include\PauseScene.hpp(56): warning C4244: 'argument' : conversion from 'GLint' to 'float', possible loss of data
+     1>c:\users\astral\finalproject\include\PauseScene.hpp(57): warning C4244: 'argument' : conversion from 'GLint' to 'float', possible loss of data
+     1>c:\users\astral\finalproject\include\PauseScene.hpp(58): warning C4244: 'argument' : conversion from 'GLint' to 'float', possible loss of data
+     1>c:\users\astral\finalproject\include\PauseScene.hpp(62): warning C4244: 'argument' : conversion from 'GLint' to 'float', possible loss of data
+     1>c:\users\astral\finalproject\include\PauseScene.hpp(65): warning C4244: 'argument' : conversion from 'GLint' to 'float', possible loss of data
+     1>c:\users\astral\finalproject\include\PauseScene.hpp(68): warning C4244: 'argument' : conversion from 'GLint' to 'float', possible loss of data
+     1>c:\users\astral\finalproject\include\PlayerGun.hpp(29): warning C4018: '<' : signed/unsigned mismatch
+     1>C:\Users\Astral\FinalProject\include\MainScene.hpp(48): warning C4355: 'this' : used in base member initializer list
+     1>C:\Users\Astral\FinalProject\include\EnterScene.hpp(114): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>C:\Users\Astral\FinalProject\include\EnterScene.hpp(114): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>C:\Users\Astral\FinalProject\include\EnterScene.hpp(116): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+         Explode.cpp
+     1>..\src\Explode.cpp(25): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>..\src\Explode.cpp(25): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>..\src\Explode.cpp(27): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>..\src\Explode.cpp(27): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>..\src\Explode.cpp(29): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>..\src\Explode.cpp(29): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>..\src\Explode.cpp(31): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>..\src\Explode.cpp(31): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>..\src\Explode.cpp(33): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>..\src\Explode.cpp(33): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>..\src\Explode.cpp(35): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>..\src\Explode.cpp(35): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+         EnemyShip7.cpp
+     1>c:\users\astral\finalproject\include\PlayerGun.hpp(29): warning C4018: '<' : signed/unsigned mismatch
+     1>..\src\EnemyShip7.cpp(31): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>..\src\EnemyShip7.cpp(40): warning C4018: '<' : signed/unsigned mismatch
+     1>..\src\EnemyShip7.cpp(49): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>..\src\EnemyShip7.cpp(49): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>..\src\EnemyShip7.cpp(50): warning C4018: '<' : signed/unsigned mismatch
+         EnemyShip6.cpp
+     1>c:\users\astral\finalproject\include\PlayerGun.hpp(29): warning C4018: '<' : signed/unsigned mismatch
+     1>..\src\EnemyShip6.cpp(20): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\EnemyShip6.cpp(20): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\EnemyShip6.cpp(20): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\EnemyShip6.cpp(20): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\EnemyShip6.cpp(21): warning C4018: '<' : signed/unsigned mismatch
+     1>..\src\EnemyShip6.cpp(44): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>..\src\EnemyShip6.cpp(53): warning C4018: '<' : signed/unsigned mismatch
+     1>..\src\EnemyShip6.cpp(59): warning C4018: '<' : signed/unsigned mismatch
+     1>..\src\EnemyShip6.cpp(111): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\EnemyShip6.cpp(111): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\EnemyShip6.cpp(112): warning C4018: '<' : signed/unsigned mismatch
+         EnemyShip5.cpp
+     1>c:\users\astral\finalproject\include\PlayerGun.hpp(29): warning C4018: '<' : signed/unsigned mismatch
+     1>..\src\EnemyShip5.cpp(29): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\EnemyShip5.cpp(31): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\EnemyShip5.cpp(40): warning C4018: '<' : signed/unsigned mismatch
+     1>..\src\EnemyShip5.cpp(62): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\EnemyShip5.cpp(62): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data

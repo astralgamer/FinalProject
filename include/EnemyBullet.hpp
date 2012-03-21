@@ -19,8 +19,9 @@ class EnemyBullet
 public:
     EnemyBullet(Vec2f pos, float dmg, float radius, Vec2f vel);
 	void collide(PlayerShip* p);
-    void draw(Texture bullet);
+    void draw(Texture bullet,int type);
 	void update();
+	int x,y;
 	float dmg, radius;
 	Vec2f pos, vel;
 	bool isAlive;

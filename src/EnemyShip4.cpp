@@ -39,6 +39,7 @@ void  EnemyShip4::update(){
 void EnemyShip4::init(){
 	shipTexture = Texture(loadImage(loadResource(RES_ENEMY4)));
 	missle = Texture(loadImage(loadResource(RES_ENEMY6)));
+	//missle = Texture(loadImage(loadResource(RES_EBULLET2)));
 	explo = Texture( loadImage( loadResource( RES_EXPLODE ) ) );
 }
 

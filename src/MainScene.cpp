@@ -1,11 +1,21 @@
 #include "MainScene.hpp"
+#define FPS 60.0f
+#define BAR_HEIGHT 30
+#define BAR_WIDTH 400
+#define COVER_WIDTH ( BAR_WIDTH - 21 )
+#define COVER_HEIGHT ( BAR_HEIGHT - 21 )
+Vec2f stars[500];
 
-bool paused = false;
-
+Vec2f offset(0,1);
 void MainScene::onLoad()
 {
 	createLevel();
     ps.init();
+	pause.init();
+    for( int i = 0; i < 500; i++ )
+    {
+        stars[i] = Vec2f(Rand::randFloat(ci::app::AppBasic::get()->getWindowWidth()), Rand::randFloat(ci::app::AppBasic::get()->getWindowWidth()));
+    }
 	for(int i=0;i<enemy.size();i++)
 		enemy[i]->init();
 	time = 0;
@@ -13,27 +23,17 @@ void MainScene::onLoad()
 	
 }
 
-void MainScene::mouseDown( MouseEvent &event ) {
-	if(ps.remainingLife > 0)
-		ps.pg.firing = true;
-    mMouseLoc = event.getPos();
-}
+void MainScene::mouseDown( MouseEvent &event ) {}
 
-void MainScene::mouseUp( MouseEvent &event ){
-	if(ps.remainingLife > 0)
-		ps.pg.firing = false;
-}
+void MainScene::mouseUp( MouseEvent &event ){}
 
-void MainScene::mouseMove( MouseEvent &event ) {
-    mMouseLoc = event.getPos();
-}
+void MainScene::mouseMove( MouseEvent &event ) {}
 
-void MainScene::mouseDrag( MouseEvent &event ) {
-    mMouseLoc = event.getPos();
-}
+void MainScene::mouseDrag( MouseEvent &event ) {}
 
 void MainScene::update()
 {
+	//offset += 2;
 	if(ps.remainingLife > 0){
 		time += dt;
 		for ( size_t i = 0; i < enemy.size(); ++i ) {
@@ -55,6 +55,8 @@ void MainScene::update()
 							break;
 						}
 					}
+					if(dynamic_cast<EnemyShip5*>(enemy[i]) != NULL && enemy.size() > 1)
+						del = false;
 					if(del){
 						delete enemy[i];
 						enemy.erase(enemy.begin()+i);
@@ -65,15 +67,15 @@ void MainScene::update()
 				}
 			}
 		}
-		if ( mMouseLoc.x - ps.width/2 < 0 )
-			mMouseLoc.x = ps.width/2;
-		else if (mMouseLoc.x + ps.width/2 > getWindowWidth() )
-			mMouseLoc.x = getWindowWidth() - ps.width/2;
-		if ( mMouseLoc.y + ps.height > getWindowHeight() )
-			mMouseLoc.y = getWindowHeight() - ps.height;
-		else if ( mMouseLoc.y < 0 )
-			 mMouseLoc.y = 0;
-		ps.update(mMouseLoc);
+		if ( ps.mMouseLoc.x - ps.width/2 < 0 )
+			ps.mMouseLoc.x = ps.width/2;
+		else if (ps.mMouseLoc.x + ps.width/2 > getWindowWidth() )
+			ps.mMouseLoc.x = getWindowWidth() - ps.width/2;
+		if ( ps.mMouseLoc.y + ps.height > getWindowHeight() )
+			ps.mMouseLoc.y = getWindowHeight() - ps.height;
+		else if ( ps.mMouseLoc.y < 0 )
+			 ps.mMouseLoc.y = 0;
+		ps.update();
 	}
 }
 
@@ -81,11 +83,19 @@ void MainScene::draw()
 {
 	
 	gl::color(1.f,1.f,1.f);
+    for( int i = 0; i < 500; i++ )
+    {
+		stars[i] += offset;
+		stars[i].y = int(stars[i].y)%800;
+        drawSolidCircle( stars[i], Rand::randFloat( 1.3f ));
+    }
 	for(size_t i=0;i<enemy.size();++i){
 		if(time >= enemy[i]->arrivalTime){
 			enemy[i]->draw();
 		}
 	}
+	if(enemy.size()==0)
+		gl::drawString("YOU WIN!",Vec2f(350,300));
 	if(ps.remainingLife > 0)
 		ps.draw();
 	else
@@ -93,11 +103,18 @@ void MainScene::draw()
 }
 
 void MainScene::onKeyUp(KeyEvent &e){
-    if ( e.getCode() == KeyEvent::KEY_SPACE ) {
-        paused = true;
+    if ( e.getCode() == KeyEvent::KEY_ESCAPE ) {
         getManager()->push(&pause);
     }
+    else{
+        ps.onKeyUp(e);
+    }
 }
+
+void MainScene::onKeyDown(KeyEvent &e){
+    ps.onKeyDown(e);
+}
+
 
 void MainScene::createLevel()
 {

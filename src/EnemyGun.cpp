@@ -34,6 +34,6 @@ void EnemyGun::update(Vec2f pos, Vec2f vel)
 void EnemyGun::draw(int type)
 {
    for( int i = 0; i < bullets.size();i++){
-        bullets[i]->draw(textures[type]);
+        bullets[i]->draw(textures[type],type);
     }
 }

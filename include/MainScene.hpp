@@ -1,6 +1,7 @@
 #ifndef FinalProject_MainScene_hpp
 #define FinalProject_MainScene_hpp
 
+#include "PauseScene.hpp"
 #include "SceneManager.hpp"
 #include "PlayerShip.hpp"
 #include "EnemyShip.hpp"
@@ -11,6 +12,7 @@
 #include "EnemyShip5.hpp"
 #include "EnemyShip6.hpp"
 #include "PauseScene.hpp"
+#include "cinder/Rect.h"
 #include "cinder/gl/gl.h"
 #include "cinder/app/AppBasic.h"
 #include "cinder/ImageIo.h"
@@ -31,10 +33,14 @@ using namespace std;
 using namespace gl;
 
 class MainScene : public SceneManager::Scene {
-	float t;
     virtual void onDeactivate(SceneManager &sm) {
 		//delete this;
 	}
+    
+    virtual void onActivate(){
+        ps.state = 0;
+        ps.pg->firing = false;
+    }
     
     PauseScene pause;
     
@@ -43,13 +49,14 @@ public:
 	virtual void draw();
 	virtual void update();
 	void onKeyUp(KeyEvent &e);
+    void onKeyDown(KeyEvent &e);
     void setup();
     void mouseDown( MouseEvent &event );
     void mouseUp( MouseEvent &event );
     void mouseMove( MouseEvent &event );    
     void mouseDrag( MouseEvent &event );
     virtual void onLoad();
-	void createLevel();
+    void createLevel();
     Vec2f mMouseLoc;
     PlayerShip ps;
 	float time;

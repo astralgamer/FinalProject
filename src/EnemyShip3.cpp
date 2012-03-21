@@ -6,24 +6,21 @@ EnemyShip3::EnemyShip3(int arrivalTime, float hp, float atkspd, float xpos, floa
 }
 
 void  EnemyShip3::update(){
-	if(p->mMouseLoc.y > pos.y)
-		vel.y = 75;
-	else
-		vel.y = -75;
-	if(p->mMouseLoc.x > pos.x)
-		vel.x = 75;
-	else
-		vel.x = -75;
-	EnemyShip::update();
-	if(pos.x-width-200 < p->mMouseLoc.x && pos.x+width+200 > p->mMouseLoc.x && hp > 0){
-		if(pos.y < p->mMouseLoc.y)
-			firing=true;
-	}
-	else
-		firing=false;
-	for(int i=0;i<eg.size();i++){
-		eg[i]->firing = firing;
-		eg[i]->update(Vec2f(pos.x,pos.y-height/2),Vec2f(0,5));
+	float dis = pos.distance(p->mMouseLoc);
+	float speed = pos.distance(vel);
+	t += 1/ci::app::AppBasic::get()->getFrameRate();
+	pos += Vec2f(((p->mMouseLoc.x - pos.x) / dis) * (speed/180), ((p->mMouseLoc.y - pos.y) / dis) * (speed/180));
+	rec = Rectf( Vec2f(pos.x-width/2.0,pos.y-height/2.0), Vec2f(pos.x+width/2.0,pos.y+height/2.0));
+	for(int i=0;i<minions.size();i++){
+		minions[i]->update();
+		if(minions[i]->hp > 0)
+			minions[i]->collide();
+		else{
+			if(minions[i]->ex.size() <= 0){
+				delete minions[i];
+				minions.erase(minions.begin()+i);
+			}
+		}
 	}
 	for(int i=0;i<ex.size();i++){
 		if(ex[i]->isAlive)
@@ -37,7 +34,8 @@ void  EnemyShip3::update(){
 
 void EnemyShip3::init(){
 	shipTexture = Texture(loadImage(loadResource(RES_ENEMY3)));
-	EnemyShip::init();
+	missle = Texture(loadImage(loadResource(RES_EBULLET2)));
+	explo = Texture( loadImage( loadResource( RES_EXPLODE ) ) );
 }
 
 void EnemyShip3::collide(){
@@ -47,5 +45,10 @@ void EnemyShip3::collide(){
 void  EnemyShip3::draw(){
 	if(hp>0)
 		gl::draw(shipTexture,Vec2f(pos.x-width/2.0,pos.y-height/2.0));
-	EnemyShip::draw();
+	for(int i=0;i<minions.size();i++){
+		minions[i]->draw();
+	}
+	for(int i=0;i<ex.size();i++){
+		ex[i]->draw();
+	}
 }

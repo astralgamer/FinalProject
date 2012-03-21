@@ -27,9 +27,6 @@
     <ClInclude Include="..\include\PlayerShip.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\EnemyShip.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\include\MainScene.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -39,10 +36,16 @@
     <ClInclude Include="..\include\SceneManager.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\EnemyGun.hpp">
+    <ClInclude Include="..\include\EnterScene.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\include\EnemyBullet.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\EnemyGun.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\EnemyShip.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\include\EnemyShip1.hpp">
@@ -63,7 +66,13 @@
     <ClInclude Include="..\include\EnemyShip6.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\EnemyShip7.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="..\include\Explode.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\PlayerGun1.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -73,19 +82,13 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\FinalProjectApp.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\PlayerBullet.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\PlayerGun.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\src\PlayerShip.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\EnemyShip.cpp">
+    <ClCompile Include="..\src\FinalProjectApp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\src\MainScene.cpp">
@@ -95,6 +98,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\src\EnemyGun.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\EnemyShip.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\src\EnemyShip1.cpp">
@@ -115,43 +121,14 @@
     <ClCompile Include="..\src\EnemyShip6.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\EnemyShip7.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="..\src\Explode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\resources\Ship.png">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="..\resources\Bullet1.png">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="..\resources\Enemy.png">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="..\resources\Enemy2.png">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="..\resources\Bullet2.png">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="..\resources\Bullet3.png">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="..\resources\ShipMap.png">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="..\resources\Enemy3.png">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="..\resources\Enemy4.png">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="..\resources\Enemy5.png">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="..\resources\Enemy6.png">
-      <Filter>Resource Files</Filter>
-    </None>
+    <ClCompile Include="..\src\PlayerGun1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

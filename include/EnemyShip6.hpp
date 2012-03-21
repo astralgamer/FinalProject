@@ -12,5 +12,6 @@ public:
 	void collide();
 	void init(){};
 	float initVel;
+	int tween;
 };
 #endif

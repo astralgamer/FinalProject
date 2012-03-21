@@ -17,14 +17,21 @@ using namespace gl;
 class PlayerGun
 {
 public:
-    PlayerGun();
-    void update(Vec2f mMouseLoc);
-    void draw();
-    void init();
-    bool firing;
-    Texture bulletTexture;
+	bool firing;
+	float t;
+	int level;
+	Texture bulletTexture;
+	vector<Texture> texts;
     vector<PlayerBullet*> bullets;
-    float t;
+	PlayerGun() : firing(false), t(0), level(1){}
+	virtual void update(Vec2f mMouseLoc){}
+    virtual void draw(){
+		for( int i=0;i<bullets.size();i++ )
+			bullets[i]->draw();
+	}
+	virtual void init(){}
+   
+   
 };
 
 #endif

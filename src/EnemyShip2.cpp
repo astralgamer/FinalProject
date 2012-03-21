@@ -8,15 +8,13 @@ EnemyShip2::EnemyShip2(int arrivalTime, float hp, float atkspd, float xpos, floa
 }
 
 void EnemyShip2::update(){
-	if(pos.y + 150 >= p->mMouseLoc.y && vel.y > 0 && pos.y > height*1.5+20)
-		vel.y *= -1;
-	if(pos.y-height/2.0 < height/2.0 && vel.y < 0)
-		vel.y *= -1;
-	if(pos.x < width/2.0 + 20 && vel.x < 0)
-		vel.x *= -1;
-	if(pos.x > 780 - width/2.0 && vel.x > 0)
-		vel.x *= -1;
-	EnemyShip::update();
+	float dis = pos.distance(Vec2f(p->mMouseLoc.x,p->mMouseLoc.y-400));
+	float speed = pos.distance(vel);
+	t += 1/ci::app::AppBasic::get()->getFrameRate();
+	pos += Vec2f(((p->mMouseLoc.x - pos.x) / dis) * (speed/120), ((p->mMouseLoc.y-400 - pos.y) / dis) * (speed/120));
+	if(pos.y - height < 0)
+		pos.y = height;
+	rec = Rectf( Vec2f(pos.x-width/2.0,pos.y-height/2.0), Vec2f(pos.x+width/2.0,pos.y+height/2.0));
 	if(pos.x-width-200 < p->mMouseLoc.x && pos.x+width+200 > p->mMouseLoc.x && hp > 0){
 		if(pos.y < p->mMouseLoc.y)
 			firing=true;
@@ -25,8 +23,8 @@ void EnemyShip2::update(){
 		firing=false;
 	for(int i=0;i<eg.size();i++)
 		eg[i]->firing = firing;
-	eg[0]->update(Vec2f(pos.x-width/3,pos.y-height/2),Vec2f(-5,8));
-	eg[1]->update(Vec2f(pos.x+width/3,pos.y-height/2),Vec2f(5,8));
+	eg[0]->update(Vec2f(pos.x-width/3,pos.y-height/2),Vec2f(0,8));
+	eg[1]->update(Vec2f(pos.x+width/3,pos.y-height/2),Vec2f(0,8));
 	for(int i=0;i<ex.size();i++){
 		if(ex[i]->isAlive)
 			ex[i]->update();

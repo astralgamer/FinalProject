@@ -3,11 +3,10 @@
 EnemyShip1::EnemyShip1(int arrivalTime, float hp, float atkspd, float xpos, float ypos, float xvel, float yvel,PlayerShip* p) : EnemyShip(arrivalTime,hp,atkspd,xpos,ypos,xvel,yvel,46,46,p)
 {
 	rec = Rectf( Vec2f(pos.x-width/2,pos.y-height/2), Vec2f(pos.x+width/2,pos.y+height/2));
-	bulletType = 1;
 }
 
 void EnemyShip1::update(){
-	if(pos.y + 150 >= p->mMouseLoc.y && vel.y > 0 && pos.y-height/2.0 > height/2.0+20)
+	if(pos.y + 250 >= p->mMouseLoc.y && vel.y > 0 && pos.y-height/2.0 > height/2.0+20)
 		vel.y *= -1;
 	if(pos.y-height/2.0 < height/2.0 && vel.y < 0)
 		vel.y *= -1;
@@ -16,7 +15,7 @@ void EnemyShip1::update(){
 	if(pos.x > 780 - width/2.0 && vel.x > 0)
 		vel.x *= -1;
 	EnemyShip::update();
-	if(pos.x-width-200 < p->mMouseLoc.x && pos.x+width+200 > p->mMouseLoc.x && hp > 0){
+	if(pos.x-width-250 < p->mMouseLoc.x && pos.x+width+250 > p->mMouseLoc.x && hp > 0){
 		if(pos.y < p->mMouseLoc.y)
 			firing=true;
 	}

@@ -24,8 +24,11 @@ void EnemyBullet::collide(PlayerShip* p){
 		}
 }
 
-void EnemyBullet::draw(Texture bullet){
-	gl::draw( bullet,Vec2f(pos.x-radius/2.0,pos.y-radius/2.0));
+void EnemyBullet::draw(Texture bullet,int type){
+	x = 4;
+	y = 7;
+	gl::draw( bullet, Area(Vec2f(32*x, 32*y), Vec2f(32*x + 32, 32*y+32)), Rectf(pos - Vec2f(16,0), pos + Vec2f(16,32)));
+	//gl::draw( bullet,Vec2f(pos.x-radius/2.0,pos.y-radius/2.0));
 }
 
 void EnemyBullet::update(){

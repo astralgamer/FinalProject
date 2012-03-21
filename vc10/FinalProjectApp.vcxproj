@@ -55,7 +55,7 @@
       <PrecompiledHeader>
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
       <AdditionalIncludeDirectories>..\..\cinder_0.8.3_vc2010\include;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -113,11 +113,14 @@
     <ClInclude Include="..\include\EnemyShip4.hpp" />
     <ClInclude Include="..\include\EnemyShip5.hpp" />
     <ClInclude Include="..\include\EnemyShip6.hpp" />
+    <ClInclude Include="..\include\EnemyShip7.hpp" />
+    <ClInclude Include="..\include\EnterScene.hpp" />
     <ClInclude Include="..\include\Explode.hpp" />
     <ClInclude Include="..\include\MainScene.hpp" />
     <ClInclude Include="..\include\PauseScene.hpp" />
     <ClInclude Include="..\include\PlayerBullet.hpp" />
     <ClInclude Include="..\include\PlayerGun.hpp" />
+    <ClInclude Include="..\include\PlayerGun1.hpp" />
     <ClInclude Include="..\include\PlayerShip.hpp" />
     <ClInclude Include="..\include\Resources.h" />
     <ClInclude Include="..\include\SceneManager.hpp" />
@@ -135,25 +138,20 @@
     <ClCompile Include="..\src\EnemyShip4.cpp" />
     <ClCompile Include="..\src\EnemyShip5.cpp" />
     <ClCompile Include="..\src\EnemyShip6.cpp" />
+    <ClCompile Include="..\src\EnemyShip7.cpp" />
     <ClCompile Include="..\src\Explode.cpp" />
     <ClCompile Include="..\src\FinalProjectApp.cpp" />
     <ClCompile Include="..\src\MainScene.cpp" />
     <ClCompile Include="..\src\PlayerBullet.cpp" />
-    <ClCompile Include="..\src\PlayerGun.cpp" />
+    <ClCompile Include="..\src\PlayerGun1.cpp" />
     <ClCompile Include="..\src\PlayerShip.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\resources\Bullet1.png" />
-    <None Include="..\resources\Bullet2.png" />
-    <None Include="..\resources\Bullet3.png" />
-    <None Include="..\resources\Enemy.png" />
-    <None Include="..\resources\Enemy2.png" />
-    <None Include="..\resources\Enemy3.png" />
-    <None Include="..\resources\Enemy4.png" />
-    <None Include="..\resources\Enemy5.png" />
-    <None Include="..\resources\Enemy6.png" />
-    <None Include="..\resources\Ship.png" />
-    <None Include="..\resources\ShipMap.png" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
