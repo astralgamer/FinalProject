@@ -132,3 +132,216 @@
      1>..\src\EnemyShip5.cpp(40): warning C4018: '<' : signed/unsigned mismatch
      1>..\src\EnemyShip5.cpp(62): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
      1>..\src\EnemyShip5.cpp(62): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+         EnemyShip4.cpp
+     1>c:\users\astral\finalproject\include\PlayerGun.hpp(29): warning C4018: '<' : signed/unsigned mismatch
+     1>..\src\EnemyShip4.cpp(18): warning C4018: '<' : signed/unsigned mismatch
+     1>..\src\EnemyShip4.cpp(29): warning C4018: '<' : signed/unsigned mismatch
+     1>..\src\EnemyShip4.cpp(52): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\EnemyShip4.cpp(52): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\EnemyShip4.cpp(53): warning C4018: '<' : signed/unsigned mismatch
+     1>..\src\EnemyShip4.cpp(56): warning C4018: '<' : signed/unsigned mismatch
+         EnemyShip3.cpp
+     1>c:\users\astral\finalproject\include\PlayerGun.hpp(29): warning C4018: '<' : signed/unsigned mismatch
+     1>..\src\EnemyShip3.cpp(13): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\EnemyShip3.cpp(13): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\EnemyShip3.cpp(13): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\EnemyShip3.cpp(13): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\EnemyShip3.cpp(14): warning C4018: '<' : signed/unsigned mismatch
+     1>..\src\EnemyShip3.cpp(25): warning C4018: '<' : signed/unsigned mismatch
+     1>..\src\EnemyShip3.cpp(47): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\EnemyShip3.cpp(47): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\EnemyShip3.cpp(48): warning C4018: '<' : signed/unsigned mismatch
+     1>..\src\EnemyShip3.cpp(51): warning C4018: '<' : signed/unsigned mismatch
+         EnemyShip2.cpp
+     1>c:\users\astral\finalproject\include\PlayerGun.hpp(29): warning C4018: '<' : signed/unsigned mismatch
+     1>..\src\EnemyShip2.cpp(17): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\EnemyShip2.cpp(17): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\EnemyShip2.cpp(17): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\EnemyShip2.cpp(17): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\EnemyShip2.cpp(24): warning C4018: '<' : signed/unsigned mismatch
+     1>..\src\EnemyShip2.cpp(28): warning C4018: '<' : signed/unsigned mismatch
+     1>..\src\EnemyShip2.cpp(49): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\EnemyShip2.cpp(49): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+         EnemyShip1.cpp
+     1>c:\users\astral\finalproject\include\PlayerGun.hpp(29): warning C4018: '<' : signed/unsigned mismatch
+     1>..\src\EnemyShip1.cpp(24): warning C4018: '<' : signed/unsigned mismatch
+     1>..\src\EnemyShip1.cpp(28): warning C4018: '<' : signed/unsigned mismatch
+     1>..\src\EnemyShip1.cpp(50): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\EnemyShip1.cpp(50): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+         EnemyShip.cpp
+     1>c:\users\astral\finalproject\include\PlayerGun.hpp(29): warning C4018: '<' : signed/unsigned mismatch
+     1>..\src\EnemyShip.cpp(22): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\EnemyShip.cpp(22): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\EnemyShip.cpp(22): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\EnemyShip.cpp(22): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\EnemyShip.cpp(26): warning C4018: '<' : signed/unsigned mismatch
+     1>..\src\EnemyShip.cpp(44): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>..\src\EnemyShip.cpp(54): warning C4018: '<' : signed/unsigned mismatch
+     1>..\src\EnemyShip.cpp(60): warning C4018: '<' : signed/unsigned mismatch
+     1>..\src\EnemyShip.cpp(111): warning C4018: '<' : signed/unsigned mismatch
+     1>..\src\EnemyShip.cpp(113): warning C4018: '<' : signed/unsigned mismatch
+         EnemyGun.cpp
+     1>c:\users\astral\finalproject\include\PlayerGun.hpp(29): warning C4018: '<' : signed/unsigned mismatch
+     1>..\src\EnemyGun.cpp(24): warning C4018: '<' : signed/unsigned mismatch
+     1>..\src\EnemyGun.cpp(36): warning C4018: '<' : signed/unsigned mismatch
+         EnemyBullet.cpp
+     1>c:\users\astral\finalproject\include\PlayerGun.hpp(29): warning C4018: '<' : signed/unsigned mismatch
+     1>..\src\EnemyBullet.cpp(30): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>..\src\EnemyBullet.cpp(30): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>..\src\EnemyBullet.cpp(30): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>..\src\EnemyBullet.cpp(30): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+         Generating Code...
+       ResourceCompile:
+         c:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /D _UNICODE /D UNICODE /l"0x0409" /I..\..\cinder_0.8.3_vc2010\include /I..\include /nologo /fo"Debug\Resources.res" Resources.rc 
+       ManifestResourceCompile:
+         c:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\FinalProjectApp.exe.embed.manifest.res" Debug\FinalProjectApp_manifest.rc 
+       Link:
+         c:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Astral\FinalProject\vc10\Debug\FinalProjectApp.exe" /INCREMENTAL /NOLOGO /LIBPATH:..\..\cinder_0.8.3_vc2010\lib /LIBPATH:..\..\cinder_0.8.3_vc2010\lib\msw cinder_d.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:LIBCMT /MANIFEST /ManifestFile:"Debug\FinalProjectApp.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Astral\FinalProject\vc10\Debug\FinalProjectApp.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE:NO /IMPLIB:"C:\Users\Astral\FinalProject\vc10\Debug\FinalProjectApp.lib" /MACHINE:X86 Debug\Resources.res
+         Debug\FinalProjectApp.exe.embed.manifest.res
+         Debug\EnemyBullet.obj
+         Debug\EnemyGun.obj
+         Debug\EnemyShip.obj
+         Debug\EnemyShip1.obj
+         Debug\EnemyShip2.obj
+         Debug\EnemyShip3.obj
+         Debug\EnemyShip4.obj
+         Debug\EnemyShip5.obj
+         Debug\EnemyShip6.obj
+         Debug\EnemyShip7.obj
+         Debug\Explode.obj
+         Debug\FinalProjectApp.obj
+         Debug\MainScene.obj
+         Debug\PlayerBullet.obj
+         Debug\PlayerGun1.obj
+         Debug\PlayerShip.obj
+     1>cinder_d.lib(Area.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(BSpline.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(Buffer.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(Camera.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(Channel.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(DataSource.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(DataTarget.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(Display.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(Exception.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(Font.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(ImageIo.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(ImageSourceFileWic.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(ImageTargetFileWic.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(Path2D.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(Rand.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(Rect.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(Shape2d.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(Stream.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(Surface.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(Text.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(Timer.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(Url.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(UrlImplWinInet.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(Utilities.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(App.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(AppBasic.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(AppImplMsw.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(AppImplMswBasic.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(AppImplMswRendererGdi.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(AppImplMswRendererGl.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(KeyEvent.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(Renderer.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(gl.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(GLee.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(Texture.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(VBO.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(Fill.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(Flip.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(CinderMsw.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(CinderMswGdiPlus.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(StackWalker.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(zutil.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(trees.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(inftrees.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(inflate.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(inffast.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(deflate.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(crc32.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(compress.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(adler32.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+       Manifest:
+         c:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\FinalProjectApp.exe.embed.manifest" /manifest Debug\FinalProjectApp.exe.intermediate.manifest
+         c:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\FinalProjectApp.exe.embed.manifest.res" Debug\FinalProjectApp_manifest.rc 
+       LinkEmbedManifest:
+         c:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Astral\FinalProject\vc10\Debug\FinalProjectApp.exe" /INCREMENTAL /NOLOGO /LIBPATH:..\..\cinder_0.8.3_vc2010\lib /LIBPATH:..\..\cinder_0.8.3_vc2010\lib\msw cinder_d.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:LIBCMT /MANIFEST /ManifestFile:"Debug\FinalProjectApp.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Astral\FinalProject\vc10\Debug\FinalProjectApp.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE:NO /IMPLIB:"C:\Users\Astral\FinalProject\vc10\Debug\FinalProjectApp.lib" /MACHINE:X86 Debug\Resources.res
+         Debug\FinalProjectApp.exe.embed.manifest.res
+         Debug\EnemyBullet.obj
+         Debug\EnemyGun.obj
+         Debug\EnemyShip.obj
+         Debug\EnemyShip1.obj
+         Debug\EnemyShip2.obj
+         Debug\EnemyShip3.obj
+         Debug\EnemyShip4.obj
+         Debug\EnemyShip5.obj
+         Debug\EnemyShip6.obj
+         Debug\EnemyShip7.obj
+         Debug\Explode.obj
+         Debug\FinalProjectApp.obj
+         Debug\MainScene.obj
+         Debug\PlayerBullet.obj
+         Debug\PlayerGun1.obj
+         Debug\PlayerShip.obj
+     1>cinder_d.lib(Area.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(BSpline.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(Buffer.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(Camera.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(Channel.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(DataSource.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(DataTarget.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(Display.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(Exception.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(Font.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(ImageIo.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(ImageSourceFileWic.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(ImageTargetFileWic.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(Path2D.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(Rand.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(Rect.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(Shape2d.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(Stream.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(Surface.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(Text.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(Timer.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(Url.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(UrlImplWinInet.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(Utilities.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(App.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(AppBasic.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(AppImplMsw.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(AppImplMswBasic.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(AppImplMswRendererGdi.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(AppImplMswRendererGl.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(KeyEvent.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(Renderer.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(gl.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(GLee.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(Texture.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(VBO.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(Fill.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(Flip.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(CinderMsw.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(CinderMswGdiPlus.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(StackWalker.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(zutil.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(trees.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(inftrees.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(inflate.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(inffast.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(deflate.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(crc32.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(compress.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>cinder_d.lib(adler32.obj) : warning LNK4204: 'C:\Users\Astral\FinalProject\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+         FinalProjectApp.vcxproj -> C:\Users\Astral\FinalProject\vc10\Debug\FinalProjectApp.exe
+       FinalizeBuildStatus:
+         Deleting file "Debug\FinalProjectApp.unsuccessfulbuild".
+         Touching "Debug\FinalProjectApp.lastbuildstate".
+     1>Done Building Project "C:\Users\Astral\FinalProject\vc10\FinalProjectApp.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:04:58.97
